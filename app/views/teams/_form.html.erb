@@ -1,0 +1,49 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :leader_name %><br />
+    <%= f.text_field :leader_name %>
+  </div>
+  <div class="field">
+    <%= f.label :leader_email %><br />
+    <%= f.text_field :leader_email %>
+  </div>
+  <div class="field">
+    <%= f.label :depart %><br />
+    <%= f.text_field :depart %>
+  </div>
+  <div class="field">
+    <%= f.label :return %><br />
+    <%= f.text_field :return %>
+  </div>
+  <div class="field">
+    <%= f.label :destination %><br />
+    <%= f.text_field :destination %>
+  </div>
+  <div class="field">
+    <%= f.label :trip_cost %><br />
+    <%= f.text_field :trip_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

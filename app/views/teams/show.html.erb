@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @team.name %>
+</p>
+
+<p>
+  <b>Leader name:</b>
+  <%= @team.leader_name %>
+</p>
+
+<p>
+  <b>Leader email:</b>
+  <%= @team.leader_email %>
+</p>
+
+<p>
+  <b>Depart:</b>
+  <%= @team.depart %>
+</p>
+
+<p>
+  <b>Return:</b>
+  <%= @team.return %>
+</p>
+
+<p>
+  <b>Destination:</b>
+  <%= @team.destination %>
+</p>
+
+<p>
+  <b>Trip cost:</b>
+  <%= @team.trip_cost %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @team.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
